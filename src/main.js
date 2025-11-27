@@ -2,7 +2,7 @@ import './style.css'
 
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_API_KEY
 const SYSTEM_PROMPT =
-  '당신은 여름 저녁 메뉴를 추천하는 셰프이자 소믈리에입니다. ' +
+  '당신은 저녁 메뉴를 추천하는 셰프이자 소믈리에입니다. ' +
   '추천은 한국어로 작성하고, 2~3개의 메인 메뉴와 가벼운 곁들임/음료를 짧게 제안하세요. ' +
   '기온, 날씨, 기분과 같은 맥락을 반영하고, 각 메뉴에 간단한 이유를 덧붙이세요.'
 const chatHistory = []
@@ -13,10 +13,10 @@ app.innerHTML = `
   <div class="page-shell">
     <div class="glass-panel">
       <header class="hero">
-        <p class="eyebrow">청량한 저녁 챗봇</p>
+        <p class="eyebrow">저녁 챗봇</p>
         <h1>오늘 저녁, 무엇이 어울릴까요?</h1>
         <p class="hero-copy">
-          ChatGPT에게 기분과 상황을 알려주면 신선한 여름 저녁 메뉴를 추천해 드려요.
+          ChatGPT에게 기분과 상황을 알려주면 저녁 메뉴를 추천해 드려요.
         </p>
         <div class="api-status" id="apiStatus">
           <span class="status-dot" id="apiStatusDot"></span>
@@ -156,7 +156,7 @@ function init() {
   }
 
   const greeting =
-    '바닷바람처럼 시원한 저녁이 어울리네요. 원하는 분위기나 재료를 알려주시면 메뉴를 추천해 드릴게요!'
+    '원하는 분위기나 재료를 알려주시면 메뉴를 추천해 드릴게요!'
   appendMessage('assistant', greeting)
   chatHistory.push({
     role: 'assistant',
